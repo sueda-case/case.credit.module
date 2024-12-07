@@ -1,0 +1,2 @@
+INSERT INTO customer (id, name, surname, credit_limit, used_credit_limit) VALUES (1, 'John', 'Doe', 1000.0, 200.0);
+INSERT INTO customer (id, name, surname, credit_limit, used_credit_limit) VALUES (2, 'Jane', 'Smith', 1500.0, 500.0);

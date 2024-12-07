@@ -1,0 +1,35 @@
+1.)Create Loan Api Curl
+curl --location '127.0.0.1:9001/api/loan/admin/apply' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic YWRtaW46YWRtaW5wYXNzd29yZA==' \
+--header 'Cookie: JSESSIONID=D9EA23786EA7F8D046B7E311CCA67BDE' \
+--data '{
+    "customerId": 2,
+    "loanAmount": 500.00,
+    "numberOfInstallment":4,
+    "interestRate": 0.2
+}'
+
+2.)List Loan Api curl
+
+curl --location '127.0.0.1:9001/api/loan/admin/loan/2' \
+--header 'Authorization: Basic YWRtaW46YWRtaW5wYXNzd29yZA==' \
+--header 'Cookie: JSESSIONID=D9EA23786EA7F8D046B7E311CCA67BDE'
+
+3.)List Installment ApiCurl
+curl --location '127.0.0.1:9001/api/loan/admin/loanInstallment/33' \
+--header 'Authorization: Basic YWRtaW46YWRtaW5wYXNzd29yZA==' \
+--header 'Cookie: JSESSIONID=D9EA23786EA7F8D046B7E311CCA67BDE'
+
+4-) Pay Loan Api Curl
+curl --location --request PUT '127.0.0.1:9001/api/loan/admin/pay/33/450' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic YWRtaW46YWRtaW5wYXNzd29yZA==' \
+--header 'Cookie: JSESSIONID=D9EA23786EA7F8D046B7E311CCA67BDE' \
+--data '{
+    "customerId": 2,
+    "loanAmount": 500.00,
+    "numberOfInstallment":4,
+    "interestRate": 0.2
+}'
+
